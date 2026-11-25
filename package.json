@@ -1,0 +1,59 @@
+{
+  "name": "bytedance-careers-mcp",
+  "version": "1.0.1",
+  "description": "MCP server for ByteDance careers site (jobs.bytedance.com)",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/src/index.js",
+  "bin": {
+    "bytedance-careers-mcp": "dist/src/stdio.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "bytedance",
+    "careers",
+    "jobs",
+    "recruitment"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eliseowzy/bytedance-careers-mcp-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Eliseowzy/bytedance-careers-mcp-server/issues"
+  },
+  "homepage": "https://github.com/Eliseowzy/bytedance-careers-mcp-server#readme",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/index.ts",
+    "prepublishOnly": "npm run build",
+    "start": "node dist/src/index.js",
+    "stdio": "node dist/src/stdio.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.2",
+    "express": "^5.1.0",
+    "lru-cache": "^11.1.0",
+    "pino": "^9.9.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.2.1",
+    "tsx": "^4.20.3",
+    "typescript": "^5.9.2"
+  }
+}
